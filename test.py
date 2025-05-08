@@ -24,7 +24,7 @@ volume = cast(interface, POINTER(IAudioEndpointVolume))
 # volume.GetMute()
 # volume.GetMasterVolumeLevel()
 volrange = volume.GetVolumeRange()
-volume.SetMasterVolumeLevel(-20.0, None)
+
 minvol = volrange[0]
 maxvol = volrange[1]
 
@@ -51,7 +51,8 @@ while True:
 
 
         vol = np.interp(length,[50,300],[minvol,maxvol])
-        print(vol)
+        print(int(length),vol)
+        volume.SetMasterVolumeLevel(vol, None)
 
     cTime = time.time()
     fps = 1/(cTime-pTime)
