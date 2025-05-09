@@ -64,8 +64,6 @@ python gvc.py
 
 ## 🌟 Demo
 
-![Demo GIF – Hand controlling volume](https://user-images.githubusercontent.com/demo-image.gif)
-<sup>*Replace with your own demo GIF/image*</sup>
 
 ---
 
